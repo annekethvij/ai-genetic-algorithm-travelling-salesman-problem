@@ -7,7 +7,6 @@ initial_population_size = 0
 number_of_cities_to_traverse = 0
 cities_list_to_traverse = []
 
-# input_file_path = "/Users/annekethvij/Documents/resource/input3.txt"
 input_file_path = "input.txt"
 # print(os.path.isfile(input_file_path))
 # checking for input file before proceeding with the computation.
@@ -248,7 +247,6 @@ if os.path.isfile(input_file_path):
             final_path = min(population, key=calculate_fitness)
             final_path_cost = calculate_fitness(final_path)
 
-            # output_file = open("/Users/annekethvij/Documents/resource/output.txt", "w")
             output_file = open("output.txt", "w")
             print(round(final_path_cost, 3), file=output_file)
             for city in final_path:
@@ -257,13 +255,11 @@ if os.path.isfile(input_file_path):
             # print("Final Path is: ", final_path)
             # print("Final Path length is: ", len(final_path))
         elif number_of_cities_to_traverse == 1:
-            # output_file = open("/Users/annekethvij/Documents/resource/output.txt", "w")
             output_file = open("output.txt", "w")
             print(0, file=output_file)
             for _ in range(2):
                 print(cities_list_to_traverse[0], file=output_file)
         else:
-            # output_file = open("/Users/annekethvij/Documents/resource/output.txt", "w")
             output_file = open("output.txt", "w")
             print(0, file=output_file)
 
